@@ -4,7 +4,7 @@
 
 🥉 A React Hook containing the last path from a Next.js route + some goodies 🎁
 
-Specially useful when working with dynamic routes
+Fast and small (1.1kB gzipped). Based on regex. Specially useful when working with dynamic routes.
 
 ### Install
 
