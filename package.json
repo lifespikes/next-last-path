@@ -1,0 +1,41 @@
+{
+  "name": "next-last-path",
+  "version": "0.0.2",
+  "description": "Returns the last path from a Next.js route.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc"
+  },
+  "keywords": [
+    "react",
+    "next",
+    "nextjs",
+    "next.js",
+    "next.js plugin",
+    "next.js router",
+    "next.js route",
+    "next.js path",
+    "next.js last path",
+    "next.js last route"
+  ],
+  "author": "Josue Munoz",
+  "license": "MIT",
+  "peerDependencies": {
+    "next": ">=9.0.0",
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.23",
+    "next": ">=9",
+    "react": ">=16",
+    "react-dom": ">=16",
+    "typescript": "^4.8.4"
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
