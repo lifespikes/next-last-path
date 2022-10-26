@@ -1,8 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { useLastPathProps } from './types'
-import { regex, sanitizePath } from './lib'
-import { makeMatch } from './lib/match'
+import { regex, sanitizePath, makeMatch } from './lib'
 
 export const useLastPath: useLastPathProps = (options) => {
   const { pathname, isReady, query } = useRouter()
@@ -28,9 +27,13 @@ export const useLastPath: useLastPathProps = (options) => {
       if (pathname === '/') {
         lastPath = defaultHome || '/'
       }
-
-      setIsDynamic(!!lastPath.match(regex.isDynamic))
-      setLastPath(sanitizePath(lastPath, allowDots, allowBrackets))
+      const _isDynamic = !!lastPath.match(regex.isDynamic)
+      const sanitizedPath = sanitizePath(lastPath, allowDots, allowBrackets)
+      setIsDynamic(_isDynamic)
+      setLastPath(sanitizedPath)
+      if (_isDynamic) {
+        setLastPath(query[sanitizedPath])
+      }
     }
   }, [pathname, isReady])
 
