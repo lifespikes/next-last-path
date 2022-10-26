@@ -7,7 +7,8 @@
 ### Features
 
 - ⚡️ Fast
-- 🧩 Small (1.1kB gzipped). 
+- 🧩 Small (1.1kB gzipped).
+- 🥶 Dependency free.
 - 🧪 Based on regex. 
 - 🧨 Specially useful when working with dynamic routes.
 
