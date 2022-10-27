@@ -21,7 +21,7 @@ npm i next-last-path
 ### Usage
 
 ```js
-import { useLastPath } from 'uselastpath'
+import { useLastPath } from 'next-last-path'
 
 const Component = (props: any) => {
   const { lastPath, isLastPath, isDynamic, query, isMatch } = useLastPath()
